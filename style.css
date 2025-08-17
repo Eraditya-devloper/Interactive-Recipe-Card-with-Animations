@@ -1,0 +1,212 @@
+/* --- General Styling & Variables --- */
+:root {
+    --primary-color: #a64d79; /* A warm, inviting color */
+    --secondary-color: #f3e5f5;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --border-radius: 15px;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- Recipe Card Layout --- */
+.recipe-card {
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.recipe-content {
+    padding: 2rem;
+}
+
+.recipe-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.recipe-meta {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    text-align: center;
+    background: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.meta-item span {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.meta-item p {
+    margin: 0.25rem 0 0 0;
+}
+
+/* --- Section Styling (Ingredients & Instructions) --- */
+.recipe-section {
+    margin-bottom: 1.5rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    margin: 0;
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    transition: all 0.2s ease-in-out;
+}
+
+/* --- Hover Animation --- */
+ul li:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+/* --- Collapsible Content --- */
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Smooth, bouncy transition */
+}
+
+.collapsible-content.show {
+    max-height: 1000px; /* Large enough to fit content */
+}
+
+/* --- Buttons & Controls --- */
+.toggle-btn, .btn-primary, .btn-secondary {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.toggle-btn {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.toggle-btn:hover {
+    background-color: #e1bee7;
+}
+
+.cooking-controls {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #8e24aa;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #eee;
+    color: #555;
+    margin-left: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #ddd;
+}
+
+/* --- Step Highlighting & Progress Bar --- */
+#instructions-ol li {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.highlighted-step {
+    background-color: var(--secondary-color);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    height: 10px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+
+    .recipe-card {
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .recipe-image {
+        height: 200px;
+    }
+
+    .recipe-content {
+        padding: 1.5rem;
+    }
+
+    .recipe-meta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe card</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="recipe-card">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1987&auto=format&fit=crop" alt="A delicious chocolate cake" class="recipe-image">
+        
+        <div class="recipe-content">
+            <h1 class="recipe-title">Decadent Chocolate Cake</h1>
+
+            <div class="recipe-meta">
+                <div class="meta-item">
+                    <span>Prep Time:</span>
+                    <p>25 mins</p>
+                </div>
+                <div class="meta-item">
+                    <span>Servings:</span>
+                    <p>8 slices</p>
+                </div>
+            </div>
+
+            <div class="recipe-section">
+                <div class="section-header">
+                    <h2>Ingredients</h2>
+                    <button id="toggle-ingredients" class="toggle-btn">Show</button>
+                </div>
+                <ul id="ingredients-list" class="collapsible-content">
+                    <li>2 cups all-purpose flour</li>
+                    <li>2 cups sugar</li>
+                    <li>3/4 cup unsweetened cocoa powder</li>
+                    <li>2 teaspoons baking soda</li>
+                    <li>1 teaspoon baking powder</li>
+                    <li>1 cup buttermilk</li>
+                    <li>1/2 cup vegetable oil</li>
+                    <li>2 large eggs</li>
+                    <li>1 cup freshly brewed hot coffee</li>
+                </ul>
+            </div>
+            
+            <div class="recipe-section">
+                <div class="section-header">
+                    <h2>Instructions</h2>
+                     <button id="toggle-steps" class="toggle-btn">Show</button>
+                </div>
+                 <div id="steps-list" class="collapsible-content">
+                    <div class="progress-container">
+                        <div id="progress-bar"></div>
+                    </div>
+                    <ol id="instructions-ol">
+                        <li>Preheat oven to 350°F (175°C). Grease and flour two 9-inch round baking pans.</li>
+                        <li>In a large bowl, stir together the flour, sugar, cocoa, baking soda, and baking powder.</li>
+                        <li>Add the buttermilk, oil, and eggs. Beat on medium speed for 2 minutes.</li>
+                        <li>Stir in the hot coffee. The batter will be thin, but this is normal.</li>
+                        <li>Pour the batter evenly into the prepared pans.</li>
+                        <li>Bake for 30 to 35 minutes, or until a wooden skewer inserted into the center comes out clean.</li>
+                        <li>Cool in pans for 10 minutes before removing to a wire rack to cool completely.</li>
+                    </ol>
+                    <div class="cooking-controls">
+                        <button id="start-btn" class="btn-primary">Start Cooking</button>
+                        <button id="next-btn" class="btn-secondary" style="display: none;">Next Step</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
